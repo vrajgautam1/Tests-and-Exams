@@ -74,7 +74,7 @@ function Sidebar() {
           <div className="collapse" id="tables">
             <ul className="nav nav-collapse">
               <li>
-                <Link to="/table">
+                <Link to="/admin/table">
                   <span className="sub-item">Datatables</span>
                 </Link>
               </li>

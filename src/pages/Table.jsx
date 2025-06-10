@@ -16,12 +16,15 @@ function Table({
 
     //searching functionality.. 
     const  [search, setSearch] = useState("")
+    const  [originalProductList, setOriginalProductList] = useState([])
+  
 
     useEffect(() => {
         async function fetchdata() {
             try {
                 let res = await axios.get(url);
                 setProductList(res.data);
+                setOriginalProductList(res.data)
             } catch (error) {
                 console.log(error.message);
             }
@@ -54,13 +57,28 @@ function Table({
     }
 
     useEffect(()=>{
-        const filteredList = productList.filter((product)=>{
-            return(
-                product.productname.toLowerCase().includes(search.toLowerCase())
-            )
-        })
+        if(search.trim().length === 0){
+            setProductList(originalProductList)
+        }else{
 
-        setProductList(filteredList)
+            // 1-just productname (string match)
+            // let filteredProducts = originalProductList.filter((p)=>{
+            //     return(  
+            //         p.productname.toLowerCase().includes(search.toLowerCase())
+            //     )
+            // })
+
+            // 2-match any string in the object 
+            let filteredProducts = productList.filter((Object)=>{
+                    for(let key in Object){
+                        if(typeof Object[key] === "string" && Object[key].toLowerCase().includes(search.toLowerCase())){
+                            return true
+                        }
+                    }
+                return false
+            })
+            setProductList(filteredProducts)
+        }
     }, [search])
 
     
