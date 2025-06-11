@@ -17,20 +17,20 @@ function Footer() {
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#">
-                                    {" "}
-                                    Help{" "}
+                                    
+                                    Help
                                 </a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#">
-                                    {" "}
-                                    Licenses{" "}
+                                    
+                                    Licenses
                                 </a>
                             </li>
                         </ul>
                     </nav>
                     <div className="copyright">
-                        2024, made with{" "}
+                        2024, made with
                         <i className="fa fa-heart heart text-danger" /> by
                         <a href="http://www.themekita.com">ThemeKita</a>
                     </div>

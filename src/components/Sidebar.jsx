@@ -8,7 +8,7 @@ function Sidebar() {
     {/* Logo Header */}
     <div className="logo-header" data-background-color="dark">
       <a href="index.html" className="logo">
-        <img src="assets/img/kaiadmin/logo_light.svg" alt="navbar brand" className="navbar-brand" height={20} />
+        <img src="/admin/assets/img/kaiadmin/logo_light.svg" alt="navbar brand" className="navbar-brand" height={20} />
       </a>
       <div className="nav-toggle">
         <button className="btn btn-toggle toggle-sidebar">
@@ -36,7 +36,7 @@ function Sidebar() {
           <div className="collapse" id="dashboard">
             <ul className="nav nav-collapse">
               <li>
-                <Link to="/dashboard">
+                <Link to="/admin/dashboard">
                   <span className="sub-item">Dashboard</span>
                 </Link>
               </li>
@@ -51,7 +51,7 @@ function Sidebar() {
         </li>
         <li className="nav-item">
           <a data-bs-toggle="collapse" href="#forms">
-            <i className="fas fa-pen-square" />
+            <i className="fas fa-pen-square"/>
             <p>Forms</p>
             <span className="caret" />
           </a>
